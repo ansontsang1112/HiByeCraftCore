@@ -1,0 +1,19 @@
+#Genetic Core Items
+genetic:
+  prefix: "&b<HiByeCraft>&f"
+  no-perm: "&cYou do no have enough permissions !"
+  not-player: "&cYou are not player !! Get Off"
+  wrong-arg: "&cWrong argument !!"
+
+#Respawn Protection Section
+respawn-protection:
+  start-rp: "防止 Spawn Kill 保護啟動。"
+  end-rp: "重生保護完結，祝你繼續努力生存！"
+
+#Skill Lang
+skill:
+  saiyan:
+    ssj: "&eYou have changed to Super Saiyan"
+    ssjb: "&bYou have changed to Super Saiyan Blue"
+
+respawn-protection-time: 10

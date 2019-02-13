@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HiByeCraftCore">
+    <output-path>E:/Minecraft Server/1.13.2/plugins</output-path>
+    <root id="archive" name="HiByeCraftCore.jar">
+      <element id="module-output" name="HiByeCraftCore" />
+    </root>
+  </artifact>
+</component>

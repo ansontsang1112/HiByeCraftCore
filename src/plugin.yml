@@ -1,0 +1,11 @@
+name: HiByeCraftCore
+main: com.anson.mc.main.HiByeCraftCore
+version: 1.0.0
+author: AnsonTsang
+commands:
+  hbccreload:
+    description: Used for reload
+    usage: /hbccreload <lang / config>
+  skill:
+    description: HiByeCraft Skill
+    usage: /skill <skill type>
