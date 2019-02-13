@@ -1,4 +1,4 @@
-package com.anson.mc.main;
+package com.anson.mc.hbc.core.main;
 
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -7,26 +7,26 @@ import org.bukkit.plugin.Plugin;
 
 import java.io.File;
 
-public class LanguageManager {
+public class LangManager {
     public static String prefix, noPerm, noPlayer, wrongArg, startRp, endRp, skillSaiyanSSJ, skillSaiyanSSJB;
-    public static Integer rpt;
-    private static LanguageManager languageManager;
+    private static LangManager langManager;
     private File langFile;
-    private FileConfiguration gameLang;
+    private FileConfiguration lang;
 
-    private LanguageManager(Plugin plugin) {
+    private LangManager(Plugin plugin) {
         langFile = new File(plugin.getDataFolder(), "lang.yml");
         if(!langFile.exists()) plugin.saveResource("lang.yml", true);
-        gameLang = YamlConfiguration.loadConfiguration(langFile);
+        lang = YamlConfiguration.loadConfiguration(langFile);
     }
 
-    public static LanguageManager getInstance(Plugin plugin) {
-        if (languageManager == null) languageManager = new LanguageManager(plugin);
-        return languageManager;
+    public static LangManager getInstance(Plugin plugin) {
+        if (langManager == null) langManager = new LangManager(plugin);
+        return langManager;
     }
+
 
     private String translateString(String path) {
-        return ChatColor.translateAlternateColorCodes('&', gameLang.getString(path));
+        return ChatColor.translateAlternateColorCodes('&', lang.getString(path));
     }
 
     void loadLang() {
@@ -41,12 +41,10 @@ public class LanguageManager {
         /* Skill - Saiyan */
         skillSaiyanSSJ = translateString("skill.saiyan.ssj");
         skillSaiyanSSJB = translateString("skill.saiyan.ssjb");
-
-        rpt = gameLang.getInt("respawn-protection-time");
     }
 
     public void reloadLang() {
-        gameLang = YamlConfiguration.loadConfiguration(langFile);
+        lang = YamlConfiguration.loadConfiguration(langFile);
         loadLang();
     }
 }

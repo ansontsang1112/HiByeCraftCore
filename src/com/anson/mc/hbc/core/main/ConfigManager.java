@@ -1,4 +1,4 @@
-package com.anson.mc.main;
+package com.anson.mc.hbc.core.main;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -24,7 +24,6 @@ public class ConfigManager {
     }
 
     void loadConfig() {
-        /* Respawn Event */
         rpt = config.getInt("respawn-protection-time");
     }
 

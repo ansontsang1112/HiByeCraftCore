@@ -1,6 +1,6 @@
-package com.anson.mc.commandExecutors;
+package com.anson.mc.hbc.core.commandExecutors;
 
-import com.anson.mc.main.LanguageManager;
+import com.anson.mc.hbc.core.main.LangManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -14,14 +14,14 @@ public class SkillCommandExecutors implements CommandExecutor {
         Player player = (Player) commandSender;
 
         if(strings.length == 0) {
-            commandSender.sendMessage(LanguageManager.prefix + LanguageManager.wrongArg);
+            commandSender.sendMessage(LangManager.prefix + LangManager.wrongArg);
             return false;
         }
 
         switch(strings[0]) {
             case "saiyan":
                 if(strings.length > 2 || strings.length <= 1) {
-                    commandSender.sendMessage(LanguageManager.prefix + LanguageManager.wrongArg);
+                    commandSender.sendMessage(LangManager.prefix + LangManager.wrongArg);
                     return false;
                 }
                 switch(strings[1]) {
@@ -30,7 +30,7 @@ public class SkillCommandExecutors implements CommandExecutor {
                     case "SSJB":
                         return Saiyan.SSJB(player);
                     default:
-                        commandSender.sendMessage(LanguageManager.prefix + LanguageManager.wrongArg);
+                        commandSender.sendMessage(LangManager.prefix + LangManager.wrongArg);
                         return true;
                 }
         }

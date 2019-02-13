@@ -1,4 +1,4 @@
-#HiByeCraft Core Config
+#HiByeCraft Config File
 
-#Respawn Event
+#Respawn Protection
 respawn-protection-time: 10
