@@ -1,4 +1,34 @@
 #HiByeCraft Config File
 
+#For all config include time, we will use Second (s) to be the standard. For all config include level, it will same as Minecraft Levels
+
 #Respawn Protection
 respawn-protection-time: 10
+
+#Skill Extension
+skill:
+  xp:
+    saiyan:
+      ssj: 10
+      ssjb: 20
+    medic:
+      heal: 2
+      feed: 1
+    flyer: 2
+
+  medic:
+    regen-require: 3
+    regen-time: 10
+
+mysql:
+  enabled: true
+  host: sg.ix.hypernology.com
+  port: 3306
+  database: test_java
+  table: hibyecraft
+  username: account
+  password: ""
+  use-ssl: false
+  pool-size:
+    min: 5
+    max: 10

@@ -1,18 +1,26 @@
 #Genetic Core Items
 genetic:
-  prefix: "&b<HiByeCraft>&f"
-  no-perm: "&cYou do no have enough permissions !"
-  not-player: "&cYou are not player !! Get Off"
-  wrong-arg: "&cWrong argument !!"
+  prefix: "&b<HiByeCraft>&f "
+  no-perm: " &c你沒有足夠限權使用 !"
+  not-player: "&c你並不是玩家 !! Fuck Off"
+  wrong-arg: "&c錯誤或不足夠的參數 !!"
+  no-xp: "&c你的 XP 不足以發動技能 / 啟用功能"
 
 #Respawn Protection Section
 respawn-protection:
   start-rp: "防止 Spawn Kill 保護啟動。"
-  end-rp: "重生保護完結，祝你繼續努力生存！"
+  end-rp: "重生保護完結，祝你繼續努力生存！祝你好運 ~"
 
 #Skill Lang
 skill:
   saiyan:
-    ssj: "&eYou have changed to Super Saiyan"
-    ssjb: "&bYou have changed to Super Saiyan Blue"
+    ssj: "&e你已經轉換到超一！"
+    ssjb: "&b你已經轉換到超藍！"
+    removeal: "&b你已重新變回普通玩家！"
 
+#Help Lang
+help:
+  error: "&e你希望得到什麼幫助 ? Skill"
+  skill:
+    general: "Skill 的用法是 /skill <skill type> <option>"
+  reload: "Reload 的用法是 is /reload <lang / config>"

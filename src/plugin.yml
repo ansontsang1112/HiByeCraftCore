@@ -5,7 +5,6 @@ author: AnsonTsang
 commands:
   hbc:
     description: General For HiByeCraft
-    usage: /hbc <reload>
   skill:
     description: HiByeCraft Skill
-    usage: /skill <skill type>
+  help:

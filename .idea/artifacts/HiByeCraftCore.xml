@@ -3,6 +3,10 @@
     <output-path>E:/Minecraft Server/1.13.2/plugins</output-path>
     <root id="archive" name="HiByeCraftCore.jar">
       <element id="module-output" name="HiByeCraftCore" />
+      <element id="extracted-dir" path="E:/Library/Java/HikariCP-3.3.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/Library/Java/slf4j-api-1.7.25.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/Library/Java/slf4j-simple-1.7.25.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/Library/Java/slf4j-log4j12-1.7.25.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

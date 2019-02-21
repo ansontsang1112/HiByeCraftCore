@@ -1,4 +1,4 @@
-package com.anson.mc.hbc.core.main;
+package com.anson.mc.hbc.core.configs;
 
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -8,7 +8,7 @@ import org.bukkit.plugin.Plugin;
 import java.io.File;
 
 public class LangManager {
-    public static String prefix, noPerm, noPlayer, wrongArg, startRp, endRp, skillSaiyanSSJ, skillSaiyanSSJB;
+    public static String prefix, noPerm, noPlayer, noXP, wrongArg, startRp, endRp, skillSaiyanSSJ, skillSaiyanSSJB, getSkillSaiyanRemove, helpG,helpSkillG, helpReload;
     private static LangManager langManager;
     private File langFile;
     private FileConfiguration lang;
@@ -29,18 +29,24 @@ public class LangManager {
         return ChatColor.translateAlternateColorCodes('&', lang.getString(path));
     }
 
-    void loadLang() {
+    public void loadLang() {
         /* Genetic */
         prefix = translateString("genetic.prefix");
         noPerm = translateString("genetic.no-perm");
         noPlayer = translateString("genetic.not-player");
         wrongArg = translateString("genetic.wrong-arg");
+        noXP = translateString("genetic.no-xp");
         /* Respawn Protection */
         startRp = translateString("respawn-protection.start-rp");
         endRp = translateString("respawn-protection.end-rp");
         /* Skill - Saiyan */
         skillSaiyanSSJ = translateString("skill.saiyan.ssj");
         skillSaiyanSSJB = translateString("skill.saiyan.ssjb");
+        getSkillSaiyanRemove = translateString("skill.saiyan.removeal");
+        /* Help */
+        helpG = translateString("help.error");
+        helpSkillG = translateString("help.skill.general");
+        helpReload = translateString("help.reload");
     }
 
     public void reloadLang() {
