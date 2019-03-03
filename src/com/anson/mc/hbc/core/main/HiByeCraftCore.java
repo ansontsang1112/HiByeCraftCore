@@ -7,6 +7,7 @@ import com.anson.mc.hbc.core.configs.ConfigManager;
 import com.anson.mc.hbc.core.configs.LangManager;
 import com.anson.mc.hbc.core.listeners.PlayerDataListener;
 import com.anson.mc.hbc.core.listeners.PlayerListener;
+import com.anson.mc.hbc.core.listeners.PlayerRightClickListener;
 import com.anson.mc.hbc.core.listeners.RespawnListener;
 import com.anson.mc.hbc.core.mysql.PlayerDataManager;
 import org.bukkit.Bukkit;
@@ -24,6 +25,7 @@ public class HiByeCraftCore extends JavaPlugin {
         ConfigManager.getInstance(this).loadConfig();
         this.getServer().getPluginManager().registerEvents(new RespawnListener(), this);
         this.getServer().getPluginManager().registerEvents(new PlayerListener(), this);
+        this.getServer().getPluginManager().registerEvents(new PlayerRightClickListener(), this);
         this.getCommand("hbc").setExecutor(new ReloadCommandExecutors());
         this.getCommand("skill").setExecutor(new SkillCommandExecutors());
         this.getCommand("help").setExecutor(new HelpCommandExecutors());

@@ -7,7 +7,7 @@ import org.bukkit.plugin.Plugin;
 import java.io.File;
 
 public class ConfigManager {
-    public static int rpt,sql_port,pool_min,pool_max, xp_saiyan_ssj, xp_saiyan_ssjb, xp_medic_heal, xp_medic_feed, xp_flyer, medic_regH, medic_regT;
+    public static int rpt,sql_port,pool_min,pool_max, xp_saiyan_ssj, xp_saiyan_ssjb, xp_medic_heal, xp_medic_feed, xp_flyer, medic_regH, medic_regT, inv_T;
     public static String host,database,table,username,password;
     public static boolean sql_enabled,use_ssl;
     private static ConfigManager configManager;
@@ -40,6 +40,7 @@ public class ConfigManager {
         xp_flyer = config.getInt("skill.xp.flyer");
         medic_regH = config.getInt("skill.medic.regen-require");
         medic_regT = config.getInt("skill.medic.regen-time");
+        inv_T = config.getInt("skill.inv.inv-time");
         /* SQL Config */
         sql_enabled = config.getBoolean("mysql.enabled");
         host = config.getString("mysql.host");

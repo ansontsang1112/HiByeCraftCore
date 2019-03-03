@@ -20,6 +20,9 @@ skill:
     regen-require: 3
     regen-time: 10
 
+  Invisible:
+    inv-time: 10
+
 mysql:
   enabled: true
   host: sg.ix.hypernology.com
