@@ -2,12 +2,10 @@ package com.anson.mc.hbc.core.mysql;
 
 import com.anson.mc.hbc.core.configs.ConfigManager;
 import com.anson.mc.hbc.core.main.HiByeCraftCore;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Timestamp;
+import java.sql.*;
 import java.time.Instant;
 
 public class PlayerDataManager {
@@ -30,6 +28,24 @@ public class PlayerDataManager {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public PlayerConnectionData getPlayerData(OfflinePlayer player){
+        try(Connection connection = DataSourceManager.getInstance().getConnection();
+        PreparedStatement statement = connection.prepareStatement("SELECT * FROM `"+table+"` WHERE `PlayerName`=?")){
+            statement.setString(1,player.getName());
+            ResultSet set = statement.executeQuery();
+            if (set.next()){
+                long lastlogin = set.getLong("LastLogin");
+                long lastlogout = set.getLong("LastLogout");
+                String name = set.getString("PlayerName");
+                String ip = set.getString("IP");
+                return  new PlayerConnectionData(name,ip,lastlogin,lastlogout);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public void updateTable(Player player, String ip, long lastLogin){

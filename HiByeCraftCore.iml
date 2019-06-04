@@ -7,7 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="spigot-1.13.2" level="project" />
-    <orderEntry type="library" name="HikariCP-3.3.1" level="project" />
+    <orderEntry type="library" name="HikariCP-3.3.11" level="project" />
+    <orderEntry type="library" name="spigot-1.13.21" level="project" />
   </component>
 </module>

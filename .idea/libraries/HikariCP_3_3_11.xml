@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="HikariCP-3.3.11">
+    <CLASSES>
+      <root url="jar://H:/Library/Java/HikariCP-3.3.1.jar!/" />
+      <root url="jar://H:/Library/Java/spigot-1.13.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://H:/Library/Java/spigot-1.13.2.jar!/" />
+    </SOURCES>
+  </library>
+</component>
